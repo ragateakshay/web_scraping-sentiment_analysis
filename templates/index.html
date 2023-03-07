@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Web Page Summarizer</title>
+  </head>
+  <body>
+    <h1 align = "center">Web Page Summarizer</h1>
+    <form method="POST">
+      <label for="url">Enter the URL of the web page you want to summarize:</label>
+      <br>
+      <input type="text" id="url" name="url" required>
+      <br>
+      <br>
+      <input align = "center" type="submit" value="Summarize">
+      <input align = "center" type="submit" value="Sentiment">
+    </form>
+    {% if summary %}
+    <hr>
+    <h2>Summary:</h2>
+    <p>{{ summary }}</p>
+    {% endif %}
+    <br>
+    <br>
+    {% if sentiment %}
+    <hr>
+    <h2>Sentiment:</h2>
+    <p>{{ sentiment }}</p>
+    {% endif %}    
+  </body>
+</html>
